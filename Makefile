@@ -26,10 +26,10 @@ all: check-style bundle
 ## Builds the plugin for all supported platforms, producing a bundle.
 bundle: apply server webapp
 	rm -rf dist/
-	mkdir -p dist/$(PLUGIN_ID)
+	mkdir -p dist/$(PLUGIN_ID)/server dist/$(PLUGIN_ID)/webapp
 	cp $(MANIFEST_FILE) dist/$(PLUGIN_ID)/
-	cp -r server/dist dist/$(PLUGIN_ID)/server/
-	cp -r webapp/dist dist/$(PLUGIN_ID)/webapp/
+	cp server/dist/* dist/$(PLUGIN_ID)/server/
+	cp webapp/dist/* dist/$(PLUGIN_ID)/webapp/
 	cd dist && tar -czf $(BUNDLE_NAME) $(PLUGIN_ID)
 
 ## Builds the server executable for all supported platforms.
