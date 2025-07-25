@@ -1,0 +1,44 @@
+{
+    "id": "com.mattermost.html-viewer",
+    "name": "HTML Viewer",
+    "description": "Плагин для просмотра HTML, HTM и других web-файлов прямо в Mattermost",
+    "version": "1.0.0",
+    "min_server_version": "5.20.0",
+    "server": {
+        "executables": {
+            "linux-amd64": "server/dist/plugin-linux-amd64",
+            "darwin-amd64": "server/dist/plugin-darwin-amd64",
+            "windows-amd64": "server/dist/plugin-windows-amd64.exe"
+        }
+    },
+    "webapp": {
+        "bundle_path": "webapp/dist/main.js"
+    },
+    "settings_schema": {
+        "header": "Настройки HTML Viewer",
+        "footer": "Плагин для безопасного просмотра HTML файлов",
+        "settings": [
+            {
+                "key": "MaxFileSize",
+                "display_name": "Максимальный размер файла (MB)",
+                "type": "number",
+                "help_text": "Максимальный размер HTML файла для обработки",
+                "default": 5
+            },
+            {
+                "key": "EnableJavaScript",
+                "display_name": "Разрешить JavaScript",
+                "type": "bool",
+                "help_text": "Разрешить выполнение JavaScript в HTML файлах (небезопасно)",
+                "default": false
+            },
+            {
+                "key": "EnableCSS",
+                "display_name": "Разрешить CSS",
+                "type": "bool", 
+                "help_text": "Разрешить CSS стили в HTML файлах",
+                "default": true
+            }
+        ]
+    }
+} 

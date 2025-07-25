@@ -1,0 +1,100 @@
+.html-viewer-preview {
+    background: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 8px 0;
+}
+
+.html-viewer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.html-viewer-info {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.html-viewer-filename {
+    font-weight: 600;
+    color: #3f4350;
+    margin-right: 8px;
+}
+
+.html-viewer-filesize {
+    color: #999;
+    font-size: 0.9em;
+}
+
+.html-viewer-toggle {
+    background: #1e88e5;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background-color 0.2s;
+}
+
+.html-viewer-toggle:hover {
+    background: #1976d2;
+}
+
+.html-viewer-content {
+    margin-top: 12px;
+}
+
+.html-viewer-loading,
+.html-viewer-error {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 3px;
+}
+
+.html-viewer-loading {
+    background: #f8f9fa;
+    color: #666;
+}
+
+.html-viewer-error {
+    background: #fef5f5;
+    border: 1px solid #f5c6cb;
+}
+
+.html-viewer-warning {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+    padding: 8px;
+    background: #fef7e0;
+    border: 1px solid #f0d000;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #7d6608;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .html-viewer-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+    
+    .html-viewer-toggle {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .html-viewer-content iframe {
+        height: 300px !important;
+    }
+} 
